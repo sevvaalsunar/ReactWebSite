@@ -1,0 +1,138 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+  background: #FFFCEB;
+}
+
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+
+button, a, input, textarea {
+  cursor: none;
+}
+
+::selection {
+  background-color: #FFE66D;
+  color: #2D2D2D;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9DB;
+  border: 2px solid #2D2D2D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4ECDC4;
+  border: 2px solid #2D2D2D;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #95E1D3;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #FFF9DB;
+  border: 2px solid #2D2D2D;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #FFE66D;
+  border: 2px solid #2D2D2D;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #FFC759;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes pixelate {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-1px, -1px);
+  }
+  50% {
+    transform: translate(1px, 1px);
+  }
+  75% {
+    transform: translate(-1px, 1px);
+  }
+}
+
+.pixel-animation {
+  animation: pixelate 0.3s steps(4) infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes bounce-soft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.bounce-animation {
+  animation: bounce-soft 2s ease-in-out infinite;
+}
+
+.hard-shadow {
+  box-shadow: var(--hard-shadow);
+}
+
+.hard-shadow-sm {
+  box-shadow: var(--hard-shadow-sm);
+}
+
+.hard-shadow-lg {
+  box-shadow: var(--hard-shadow-lg);
+}
+
+.hard-shadow-hover:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #2D2D2D;
+}
